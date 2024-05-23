@@ -1,0 +1,204 @@
+:root {
+    --primary: #e69142;;
+    --bg: #010101
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Poppins', 'sans-serif';
+    background-color: var(--bg);
+    color: white;
+    /* min-height: 2000px; */
+
+}
+
+/* Navbar */
+.Navbar {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 1.4rem 7%;
+    background-color: rgba(1, 1, 1,0.8);
+    border-bottom: 1px solid #513c28;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.Navbar .Navbar-Logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    font-style: italic;
+}
+
+.Navbar .Navbar-Logo span {
+    color: var(--primary);
+}
+
+.Navbar .Navbar-Nav a {
+    font-style: 1.4rem;
+    display: inline-block;
+    margin: 0 1rem;
+    color: white;
+    
+}
+
+.Navbar .Navbar-Nav a:hover{
+    color: var(--primary);
+}
+
+.Navbar .Navbar-Nav a::after{
+   content: '';
+   display: block;
+   padding-bottom: 0.5rem;
+   border-bottom: 0.1rem solid var(--primary);
+   transform: scaleX(0);
+   transition: 0.2s linear;
+}
+
+.Navbar .Navbar-Nav a:hover::after{
+    transform: scaleX(0.5);
+  
+}
+
+.Navbar .navbar-extra a{
+    color: white;
+    margin: 0.5rem;
+  
+}
+
+.Navbar .navbar-extra a:hover{
+    color: var(--primary);
+    margin: 0.5rem;
+  
+}
+
+#menulist {
+    display: none;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url('../img/header-bg.jpeg');
+    background-repeat: no-repeat;
+    position: relative;
+    background-size: cover;
+}
+
+.hero::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(1,1,3,1) 1%, rgba(255,255,255,0) 35%);
+
+}
+
+.hero .content {
+    padding: 1.7rem 8%;
+    max-width: 30rem;
+    
+}
+
+.hero .content h1{
+    color: white;
+    font-size: 3em;
+    text-shadow: 1px 1px 3px rgb(1, 1, 3) 0.5%;
+    line-height: 1.2;
+}
+
+.hero .content h1 span {
+    color: var(--primary);
+    font-style: oblique;
+}
+
+.hero .content p {
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    line-height: 1.5;
+    font-weight: 100;
+    text-shadow: 1px 1px 3px rgb(1, 1, 3) 0.5%;
+}
+
+.hero .content .cta {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 1rem 1rem;
+    font-size: 0.9rem;
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 3px rgba(205, 186, 14, 0.5);
+    color: white;
+    background-color: var(--primary);
+}
+
+/* media QUERIES */
+
+/* Laptop */
+    @media (max-width :1366px) {
+        html {
+            font-size: 100%;
+        }
+    }
+/* Tablet */
+    @media (max-width :758px) {
+        html {
+            font-size: 60%; 
+        }
+
+        #menulist {
+            display: inline-block;
+        }
+
+        .Navbar .Navbar-Nav {
+            position: absolute;
+            top: 100%;
+            right: -100%;
+            background-color: white;
+            width: 30rem;
+            height: 100vh;
+            transition: 0.5s;
+        }
+
+        .Navbar .Navbar-Nav.active {
+            right: 0;
+        }
+
+        .Navbar .Navbar-Nav a {
+            color: var(--bg);
+            display: block;
+            margin: 1.5rem;
+            padding: 0.5rem;
+            font-size: 2rem;
+        }
+
+        .Navbar .Navbar-Nav a::after {
+            transform-origin: 0 0;
+        }
+
+        .Navbar .Navbar-Nav a:hover::after {
+            transform:scaleX(0.2)
+        }
+    
+    }
+
+/* Mobile */
+    @media (max-width :450x) {
+        html {
+            font-size: 45%;     
+        }
+    }
