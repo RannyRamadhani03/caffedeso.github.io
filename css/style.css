@@ -200,11 +200,46 @@ body {
 }
 .menu p {
     text-align: center;
-    max-width: 30rem;
-    margin: auto;
     font-size: 1.2rem;
     font-weight: 100;
     line-height: 1.5;
+}
+
+#menukita .moment img {
+    margin-top: 5px;
+    width: 30%;
+}
+
+#menukita .f_moment {
+    margin-left: 100px;
+}
+
+/* contact */
+  
+  .p-menu2 {
+    padding: 0;
+    margin-bottom: 100;
+  }
+  
+  .p-menu3 {
+    margin-left: 1%;
+    padding: 0;
+    margin-bottom: 100;
+  }
+
+  #contact .p-menu {
+    width: 5%;
+  }
+
+  #contact .p-menu2, .p-menu3 {
+    width: 4.5%;
+  }
+
+#contact {
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    background-color: #ffffff;
 }
 
 /* media QUERIES */
